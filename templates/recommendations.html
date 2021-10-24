@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+{% block body %}
+</div>
+<div>
+    <h3> Рекомендации</h3>
+    <ol class="rectangle">
+        {% for book in recommendations %}
+        <li><a href="#">{{ book['author'] }} - {{ book['title'] }}</a></li>
+        {% endfor %}
+    </ol>
+</div>
+<div>
+    <h3> История заказов</h3>
+    <ol class="rectangle">
+        {% for book in history %}
+        <li><a href="#">{{ book['author'] }} - {{ book['title'] }}</a></li>
+        {% endfor %}
+    </ol>
+</div>
+{% endblock %}
+
+
